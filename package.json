@@ -1,0 +1,27 @@
+{
+  "name": "es6-error",
+  "version": "1.0.0",
+  "description": "Easily-extendable error for use with ES6 classes",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bjyoungblood/es6-error.git"
+  },
+  "keywords": [
+    "es6",
+    "error",
+    "babel"
+  ],
+  "author": "Ben Youngblood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjyoungblood/es6-error/issues"
+  },
+  "homepage": "https://github.com/bjyoungblood/es6-error",
+  "devDependencies": {
+    "babel": "^4.7.16"
+  }
+}
