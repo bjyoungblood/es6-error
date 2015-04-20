@@ -1,13 +1,15 @@
-class ExtendableError extends Error {
+class ExtendableError {
   constructor(message) {
+    Error.call(this, message);
     Error.captureStackTrace(this, this.constructor);
-    this.message = message;
-    super(message);
-  }
-
-  get name() {
-    return this.constructor.name;
+    Object.defineProperty(this, 'name', {
+      configurable : true,
+      enumerable : false,
+      value : this.constructor.name,
+    });
   }
 }
+
+ExtendableError.prototype = new Error();
 
 export default ExtendableError;
