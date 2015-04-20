@@ -3,6 +3,13 @@
 An easily-extendable error class for use with ES6 classes (or ES5, if you so
 choose).
 
+## Why?
+
+I made this because I wanted to be able to extend Error for inheritance and type
+checking, but can never remember to add
+`Error.captureStackTrace(this, this.constructor.name)` to the constructor or how
+to get the proper name to print from `console.log`.
+
 ## ES6 Usage
 
 ```javascript
