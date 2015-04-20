@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/bjyoungblood/es6-error",
   "devDependencies": {
-    "babel": "^4.7.16"
-  }
+    "babel": "^5.1.11"
+  },
+  "dependencies": {}
 }
