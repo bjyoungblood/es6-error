@@ -1,11 +1,14 @@
 class ExtendableError extends Error {
   constructor(message) {
     super();
-    var tmp = Error.apply(this, arguments);
-    this.message = tmp.message;
+    Object.defineProperty(this, 'message', { 
+        get: function() {
+            return message;
+        }
+    })
     Object.defineProperty(this, 'stack', { 
         get: function() {
-            return tmp.stack
+            return (new Error()).stack
         }
     })
     Object.defineProperty(this, 'name', {
