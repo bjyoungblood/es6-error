@@ -4,7 +4,7 @@
   "description": "Easily-extendable error for use with ES6 classes",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --compilers js:babel/register"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/bjyoungblood/es6-error",
   "devDependencies": {
-    "babel": "^5.1.11"
+    "babel": "^5.1.11",
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2"
   },
   "dependencies": {}
 }

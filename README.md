@@ -3,6 +3,8 @@
 An easily-extendable error class for use with ES6 classes (or ES5, if you so
 choose).
 
+Tested in Node 4.0, Chrome, and Firefox.
+
 ## Why?
 
 I made this because I wanted to be able to extend Error for inheritance and type
@@ -43,3 +45,8 @@ util.inherits(MyError, ExtendableError);
 
 module.exports = MyError;
 ```
+
+#### Todo
+
+- Better browser compatibility
+- Browser tests
