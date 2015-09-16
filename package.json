@@ -1,6 +1,6 @@
 {
   "name": "es6-error",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Easily-extendable error for use with ES6 classes",
   "main": "dist/index.js",
   "scripts": {
