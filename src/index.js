@@ -1,6 +1,12 @@
 class ExtendableError extends Error {
-  constructor(message) {
+  constructor(message = '') {
     super(message);
+
+    // extending Error is weird and does not propagate `message`
+    Object.defineProperty(this, 'message', {
+      enumerable : false,
+      value : message
+    });
 
     Object.defineProperty(this, 'name', {
       enumerable : false,
