@@ -56,4 +56,9 @@ describe('ExtendableError', () => {
     let err3 = new SubTestError();
     expect(err3.toString()).to.equal('SubTestError');
   });
+
+  it('.message', () => {
+    let err = new ExtendableError('error occurred');
+    expect(err.message).to.equal('error occurred');
+  })
 });
