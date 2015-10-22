@@ -15,12 +15,13 @@ class ExtendableError extends Error {
 
     if (Error.hasOwnProperty('captureStackTrace')) {
       Error.captureStackTrace(this, this.constructor);
-    } else {
-      Object.defineProperty(this, 'stack', {
-        enumerable : false,
-        value : (new Error(message)).stack,
-      });
+      return;
     }
+
+    Object.defineProperty(this, 'stack', {
+      enumerable : false,
+      value : (new Error(message)).stack,
+    });
   }
 }
 
