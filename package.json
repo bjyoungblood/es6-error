@@ -4,7 +4,8 @@
   "description": "Easily-extendable error for use with ES6 classes",
   "main": "dist/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel/register"
+    "test": "mocha --compilers js:babel/register",
+    "prepublish": "npm test && make dist"
   },
   "repository": {
     "type": "git",
