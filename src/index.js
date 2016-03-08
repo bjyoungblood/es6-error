@@ -5,7 +5,8 @@ class ExtendableError extends Error {
     // extending Error is weird and does not propagate `message`
     Object.defineProperty(this, 'message', {
       enumerable : false,
-      value : message
+      value : message,
+      writable : true,
     });
 
     Object.defineProperty(this, 'name', {
