@@ -4,8 +4,9 @@
   "description": "Easily-extendable error for use with ES6 classes",
   "main": "dist/index.js",
   "scripts": {
+    "build": "babel src/ --modules common --out-dir dist",
     "test": "mocha --compilers js:babel/register",
-    "prepublish": "npm test && make dist"
+    "prepublish": "npm test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
   },
   "homepage": "https://github.com/bjyoungblood/es6-error",
   "devDependencies": {
-    "babel": "^5.1.11",
+    "babel-cli": "^6.7.7",
+    "babel-plugin-add-module-exports": "^0.1.4",
+    "babel-preset-es2015": "^6.6.0",
     "chai": "^3.2.0",
     "mocha": "^2.3.2"
   },
