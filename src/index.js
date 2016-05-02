@@ -12,6 +12,7 @@ class ExtendableError extends Error {
     Object.defineProperty(this, 'name', {
       enumerable : false,
       value : this.constructor.name,
+      writable : true,
     });
 
     if (Error.hasOwnProperty('captureStackTrace')) {
@@ -22,6 +23,7 @@ class ExtendableError extends Error {
     Object.defineProperty(this, 'stack', {
       enumerable : false,
       value : (new Error(message)).stack,
+      writable : true,
     });
   }
 }
