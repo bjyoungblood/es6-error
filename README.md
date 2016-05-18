@@ -1,5 +1,8 @@
 # es6-error
 
+![npm version](https://badge.fury.io/js/es6-error.svg)
+![build status](https://travis-ci.org/bjyoungblood/es6-error.svg?branch=master)
+
 An easily-extendable error class for use with ES6 classes (or ES5, if you so
 choose).
 
