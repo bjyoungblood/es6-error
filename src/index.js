@@ -4,12 +4,14 @@ class ExtendableError extends Error {
 
     // extending Error is weird and does not propagate `message`
     Object.defineProperty(this, 'message', {
+      configurable: true,
       enumerable : false,
       value : message,
       writable : true,
     });
 
     Object.defineProperty(this, 'name', {
+      configurable: true,
       enumerable : false,
       value : this.constructor.name,
       writable : true,
@@ -21,6 +23,7 @@ class ExtendableError extends Error {
     }
 
     Object.defineProperty(this, 'stack', {
+      configurable: true,
       enumerable : false,
       value : (new Error(message)).stack,
       writable : true,
