@@ -1,6 +1,6 @@
 {
   "name": "es6-error",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Easily-extendable error for use with ES6 classes",
   "main": "./lib/index",
   "jsnext:main": "./src/index",
@@ -40,10 +40,15 @@
     ],
     "plugins": [
       "add-module-exports",
-      ["babel-plugin-transform-builtin-extend", {
-        "globals": ["Error"],
-        "approximate": true
-      }]
+      [
+        "babel-plugin-transform-builtin-extend",
+        {
+          "globals": [
+            "Error"
+          ],
+          "approximate": true
+        }
+      ]
     ]
   }
 }
