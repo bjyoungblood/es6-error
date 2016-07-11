@@ -33,22 +33,5 @@
     "chai": "^3.2.0",
     "mocha": "^2.4.5"
   },
-  "dependencies": {},
-  "babel": {
-    "presets": [
-      "es2015"
-    ],
-    "plugins": [
-      "add-module-exports",
-      [
-        "babel-plugin-transform-builtin-extend",
-        {
-          "globals": [
-            "Error"
-          ],
-          "approximate": true
-        }
-      ]
-    ]
-  }
+  "dependencies": {}
 }
