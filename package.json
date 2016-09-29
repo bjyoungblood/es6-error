@@ -4,6 +4,7 @@
   "description": "Easily-extendable error for use with ES6 classes",
   "main": "./lib/index",
   "jsnext:main": "./lib/index",
+  "typings": "./lib/index.d.ts",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive",
     "build": "babel ./src --out-dir ./lib",
