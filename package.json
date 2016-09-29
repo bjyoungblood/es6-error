@@ -1,6 +1,6 @@
 {
   "name": "es6-error",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Easily-extendable error for use with ES6 classes",
   "main": "./lib/index",
   "jsnext:main": "./lib/index",
