@@ -6,7 +6,9 @@ const babel = require('babel-core'),
 // es5 build
 babel.transformFile('./src/index.js', (err, result) => {
   if (err) throw err;
-  fs.writeFile('./lib/index.js', result.code, onWriteCompleted);
+
+  let filename = './lib/index.js';
+  fs.writeFile(filename, result.code, onWriteCompleted(filename));
 });
 
 // jsnext build
@@ -18,9 +20,14 @@ let jsnextOpts = {
 
 babel.transformFile('./src/index.js', jsnextOpts, (err, result) => {
   if (err) throw err;
-  fs.writeFile('./lib/index.jsnext.js', result.code, onWriteCompleted);
+
+  let filename = './lib/index.jsnext.js';
+  fs.writeFile(filename, result.code, onWriteCompleted(filename));
 });
 
-function onWriteCompleted(err) {
-  if (err) throw err;
+function onWriteCompleted(filename) {
+  return err => {
+    if (err) throw err;
+    console.log(`${filename} written`);
+  }
 }
