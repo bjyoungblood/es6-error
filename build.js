@@ -1,33 +1,33 @@
 'use strict';
 
-const babel = require('babel-core'),
+var babel = require('babel-core'),
   fs = require('fs');
 
 // es5 build
-babel.transformFile('./src/index.js', (err, result) => {
+babel.transformFile('./src/index.js', function(err, result) {
   if (err) throw err;
 
-  let filename = './lib/index.js';
+  var filename = './lib/index.js';
   fs.writeFile(filename, result.code, onWriteCompleted(filename));
 });
 
 // jsnext build
 
-let jsnextOpts = {
+var jsnextOpts = {
   presets: [ [ 'es2015', { modules: false } ] ],
   babelrc: false
 };
 
-babel.transformFile('./src/index.js', jsnextOpts, (err, result) => {
+babel.transformFile('./src/index.js', jsnextOpts, function(err, result) {
   if (err) throw err;
 
-  let filename = './lib/index.jsnext.js';
+  var filename = './lib/index.jsnext.js';
   fs.writeFile(filename, result.code, onWriteCompleted(filename));
 });
 
 function onWriteCompleted(filename) {
-  return err => {
+  return function(err) {
     if (err) throw err;
-    console.log(`${filename} written`);
+    console.log(filename + ' written');
   }
 }
