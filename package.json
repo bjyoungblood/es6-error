@@ -3,11 +3,11 @@
   "version": "3.2.0",
   "description": "Easily-extendable error for use with ES6 classes",
   "main": "./lib/index",
-  "jsnext:main": "./lib/index",
+  "jsnext:main": "./lib/index.jsnext.js",
   "typings": "./lib/index.d.ts",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive",
-    "build": "babel ./src --out-dir ./lib",
+    "build": "node build.js",
     "prepublish": "npm run build && npm run test"
   },
   "repository": {
