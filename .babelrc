@@ -1,17 +1,3 @@
 {
-  "presets": [
-    "es2015"
-  ],
-  "plugins": [
-    "add-module-exports",
-    [
-      "babel-plugin-transform-builtin-extend",
-      {
-        "globals": [
-          "Error"
-        ],
-        "approximate": true
-      }
-    ]
-  ]
+  "presets": "./babel-config.js"
 }
