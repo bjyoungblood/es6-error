@@ -7,9 +7,10 @@
   "typings": "./lib/index.d.ts",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive",
-    "build": "npm run build:commonjs && npm run build:es",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:ts",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src/index.js --out-file lib/index.js",
     "build:es": "cross-env BABEL_ENV=es babel src/index.js --out-file lib/index.jsnext.js",
+    "build:ts": "cross-env BABEL_ENV=ts babel src/index.js --out-file lib/index.ts.js",
     "prepublish": "npm run build && npm run test"
   },
   "repository": {

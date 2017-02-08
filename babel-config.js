@@ -16,6 +16,8 @@ var modules;
 
 if (env === 'es') {
   modules = false;
+} else if (env === 'ts') {
+  modules = 'commonjs';
 } else {
   modules = 'commonjs';
   plugins.push('add-module-exports');
