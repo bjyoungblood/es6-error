@@ -11,8 +11,11 @@
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src/index.js --out-file lib/index.js",
     "build:es": "cross-env BABEL_ENV=es babel src/index.js --out-file lib/index.jsnext.js",
     "build:ts": "cross-env BABEL_ENV=ts babel src/index.js --out-file lib/index.ts.js",
-    "prepublish": "npm run build && npm run test"
+    "prepublishOnly": "npm run build && npm run test"
   },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bjyoungblood/es6-error.git"
@@ -37,6 +40,5 @@
     "chai": "^3.2.0",
     "cross-env": "^2.0.1",
     "mocha": "^2.4.5"
-  },
-  "dependencies": {}
+  }
 }
