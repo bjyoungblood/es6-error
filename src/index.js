@@ -31,4 +31,6 @@ class ExtendableError extends Error {
   }
 }
 
+ExtendableError.default = ExtendableError; // for Typescript
+
 export default ExtendableError;
