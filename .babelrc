@@ -1,3 +1,28 @@
 {
-  "presets": "./babel-config.js"
+  "plugins": [
+    ["transform-builtin-extend", {
+      "globals": ["Error"],
+      "approximate": true
+    }]
+  ],
+  "env" : {
+    "test" : {
+      "presets": [
+        ["env", { "targets": { "node": 5 } }]
+      ]
+    },
+    "cjs" : {
+      "plugins": [
+        "add-module-exports"
+      ],
+      "presets": [
+        ["env", { "modules": "commonjs" }]
+      ]
+    },
+    "es6" : {
+      "presets": [
+        ["env", { "modules": false }]
+      ]
+    }
+  }
 }
