@@ -49,6 +49,10 @@ util.inherits(MyError, ExtendableError);
 module.exports = MyError;
 ```
 
+### Known Issues
+
+- Uglification can obscure error class names ([#31](https://github.com/bjyoungblood/es6-error/issues/31#issuecomment-301128220))
+
 #### Todo
 
 - Better browser compatibility
