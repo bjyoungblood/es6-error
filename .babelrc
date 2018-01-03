@@ -13,13 +13,23 @@
     },
     "cjs" : {
       "plugins": [
-        "add-module-exports"
+        "add-module-exports",
+        ["transform-builtin-extend", {
+          "globals": ["Error"],
+          "approximate": true
+        }]
       ],
       "presets": [
         ["env", { "modules": "commonjs" }]
       ]
     },
     "es6" : {
+      "plugins": [
+        ["transform-builtin-extend", {
+          "globals": ["Error"],
+          "approximate": true
+        }]
+      ],
       "presets": [
         ["env", { "modules": false }]
       ]
